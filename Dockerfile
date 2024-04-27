@@ -1,7 +1,7 @@
-FROM golang:1.22.2 AS build-env
+FROM golang:latest AS build-env
 ADD ./  /prom2click
 WORKDIR /prom2click
-RUN GOPROXY='https://goproxy.cn,direct' go mod tidy && GOPROXY='https://goproxy.cn,direct' CGO_ENABLED=0 go build -ldflags "-X main.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X main.VersionPrerelease=DEV" -o bin/prom2click
+RUN go mod tidy &&  CGO_ENABLED=0 go build -ldflags "-X main.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X main.VersionPrerelease=DEV" -o bin/prom2click
 
 FROM alpine
 RUN apk add -U tzdata
