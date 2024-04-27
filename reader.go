@@ -7,11 +7,9 @@ import (
 	"fmt"
 	"strings"
 
-	clickhouse "github.com/ClickHouse/clickhouse-go"
+	clickhouse "github.com/ClickHouse/clickhouse-go/v2"
 	"github.com/prometheus/common/model"
 	"github.com/prometheus/prometheus/prompb"
-
-	//"github.com/prometheus/prometheus/storage/remote"
 	"go.uber.org/zap"
 )
 
