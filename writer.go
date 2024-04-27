@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/kshvakov/clickhouse"
+	clickhouse "github.com/ClickHouse/clickhouse-go"
 	"github.com/prometheus/client_golang/prometheus"
 	"go.uber.org/zap"
 )

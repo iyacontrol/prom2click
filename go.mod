@@ -1,0 +1,1 @@
+module prom2click
