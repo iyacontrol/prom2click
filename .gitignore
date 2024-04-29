@@ -1,2 +1,4 @@
+.vscode/
+go.sum
 bin
 prom2click

@@ -115,11 +115,11 @@ Usage of ./bin/prom2click:
 
     ```
 * Build prom2click and run it
-    * Install go and glide
+    * Install go 1.21 above
 
     ```console
-    $ make get-deps
-    $ make build
+    $ go mod tidy
+    $ go build -v -o bin/prom2click
     $ ./bin/prom2click
     ```
 
